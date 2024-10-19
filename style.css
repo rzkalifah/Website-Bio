@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    background-color: #121212;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+    border-color: #fafafa;
+    box-shadow: 0 0 0 1px #333333;
+    border-radius: 15px;
+    padding: 25px;
+    align-items: center;
+  }
+
+.socmed {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.socmed a {
+    text-decoration: none;
+    color: #fafafa; /* Warna default */
+    font-size: 24px; /* Ukuran ikon */
+    transition: color 0.3s ease;
+}
+
+/* Toggle for light mode */
+.toggle-container {
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+}
+
+#toggle-theme {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #888888; /* Warna abu-abu */
+    transition: color 0.3s ease;
+}
+
+#toggle-theme:hover {
+    color: #333333; /* Warna saat hover */
+}
+
+/* Avatar styling */
+.avatar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+img {
+    border-radius: 70px;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    color: #fafafa;
+    margin-top: 10px;
+}
+
+/* Tagline 'Graphic designer, Illustrator, Photographer' */
+h3 {
+    color: #fafafa;
+    margin: 5px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+/* Social media icons */
+.socmed {
+    margin: 20px 0 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.light-mode .socmed a {
+    text-decoration: none;
+    color: #333333; /* Warna default */
+    font-size: 24px; /* Ukuran ikon */
+    transition: color 0.3s ease;
+}
+
+/* Button styles */
+.button1, .button2, .button3, .button4, .button5, .button6 {
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    background: rgba(79,80,94,1);
+    color: #fafafa;
+    text-decoration: none;
+    padding: 16px 0;
+    border-radius: 10px;
+    margin: 8px 0;
+    cursor: pointer;
+    justify-content: center;
+}
+.button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover,  .button6:hover {
+    background: #333333;
+    color: #fafafa;
+}
+
+/* ----Light Mode Styles----- */
+.light-mode *{
+    background-color: #fafafa
+}
+.light-mode .container {
+    box-shadow: 0 0 0 1px #e1e1e1;
+}
+.light-mode h1, .light-mode h2, .light-mode h3 {
+    color: #333333;
+}
+
+/* Light mode button */
+.light-mode .button1, .light-mode .button2, .light-mode .button3, .light-mode .button4, .light-mode .button5, .light-mode .button6 {
+    background-color: #e1e1e1;
+    color: #333333;
+}
+
+.light-mode .button1:hover, .light-mode .button2:hover, .light-mode .button3:hover, 
+.light-mode .button4:hover, .light-mode .button5:hover, .light-mode .button6:hover {
+    background-color: #333333;
+    box-shadow: #e1e1e1
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .button1, .button2, .button3, .button4, .button5, .button6 {
+        font-size: 14px; /* Adjust button font size */
+    }
+
+    .socmed a {
+        font-size: 20px; /* Adjust social media icon size */
+    }
+
+    /* Additional adjustments for mobile */
+    .toggle-container {
+        justify-content: center; /* Center the toggle button */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Further adjust font size */
+    }
+
+    .button1, .button2, .button3, .button4, .button5, .button6 {
+        padding: 12px 0; /* Adjust button padding */
+    }
+
+    .socmed {
+        flex-direction: row; /* Stack social media icons vertically */
+    }
+}
